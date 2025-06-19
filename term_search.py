@@ -3,7 +3,7 @@ import csv
 from tqdm import tqdm
 
 
-OUTPUT_FILE = f"{SEARCH_TERM}_matches.csv"
+
 VALID_EXTENSIONS = {".py", ".c", ".h", ".cpp", ".txt", ".md", ".rst", ".hpp", ".cc"}
 
 def is_text_file(filepath):
@@ -50,7 +50,7 @@ if __name__ == "__main__":
     print("🔍 Paste the target folder path to search (drag folder into terminal or paste manually):")
     SEARCH_TERM = input("Enter search term (case sensitive): ").strip()
     folder = input("Target folder: ").strip().strip('"').strip("'")
-
+    OUTPUT_FILE = f"{SEARCH_TERM}_matches.csv"
     if not os.path.isdir(folder):
         print(f"❌ Invalid folder: {folder}")
         exit(1)
